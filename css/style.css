@@ -1,118 +1,190 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
     background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* MENU */
-.menu {
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
+/* NAVBAR */
+.navbar-custom {
     position: fixed;
-    width: 100%;
-    top: 0;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 18px;
+    padding: 12px 25px;
+    z-index: 1000;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
 }
 
-.menu nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu a {
+/* LOGO */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: #c0392b;
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+
+    /* removido o flex e gap do ícone */
+
+    text-shadow: 
+        0 2px 4px rgba(0,0,0,0.15),
+        0 6px 12px rgba(0,0,0,0.15);
 }
 
-.menu .ativo {
+/* NÃO MUDA COR */
+.navbar-brand:hover {
     color: #c0392b;
 }
 
-/* HERO */
-.hero {
-    background: url('../img/imagem1.jpg') no-repeat center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
+/* LINKS */
+.nav-link {
+    color: #000;
+    font-weight: 500;
+    margin-left: 18px;
+    position: relative;
 }
 
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* LINHA ANIMADA */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #c0392b;
+    transition: 0.3s ease;
 }
 
-.texto {
-    max-width: 500px;
+.nav-link:hover::after {
+    width: 100%;
 }
 
-.texto h1 {
-    font-size: 48px;
-    color: #a93226;
-    margin-bottom: 20px;
+/* INÍCIO */
+.nav-link.inicio {
+    color: #c0392b;
+    font-weight: 700;
 }
 
-.texto p {
-    margin-bottom: 20px;
-    color: #555;
+.nav-link.inicio:hover {
+    color: black;
 }
 
-.texto button {
-    padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 20px;
-    background: transparent;
-    cursor: pointer;
-    transition: 0.3s;
+/* SOBRE */
+.nav-link.sobre {
+    color: #000;
 }
 
-.texto button:hover {
-    background: #a93226;
-    color: white;
+.nav-link.sobre:hover {
+    color: #000;
 }
-
-/* IMAGEM */
-.imagem img {
-    width: 350px;
-}
-
-/* BOAS-VINDAS */
-.boas-vindas {
-    background: #eee;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.boas-vindas h2 {
-    color: #a93226;
-    margin-bottom: 10px;
+/* GARANTE QUE NÃO TENHA ROLAGEM */
+html, body {
+    height: 100%;
+    overflow: hidden;
 }
 
 /* FOOTER */
-.footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.footer-custom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    padding: 40px 20px;
+
+    /* sombra em cima */
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* CONTAINER */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+/* CONTEÚDO CENTRAL */
+.footer-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* TEXTO COM LINHAS */
+.footer-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-title p {
+    color: #c0392b;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* LINHAS */
+.footer-title .line {
+    flex: 1;
+    height: 2px;
+    background-color: #c0392b;
+    max-width: 200px;
+}
+
+/* REDES SOCIAIS */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #333;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #c0392b;
+}
+/* RESET */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== FUNDO (NÃO MEXER MAIS) ===== */
+.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('../img/imagem1.png') no-repeat center center;
+    background-size: cover;
+
+    z-index: -1; /* fundo */
+}
+
+/* ===== CORPO HUMANO ===== */
+.home-imagem {
+    position: fixed;
+    right: 10px;
+
+    /* posição vertical */
+    bottom: 75px;
+
+    /* tamanho grande */
+    height: 75vh;
+
+
+    display: flex;
+    align-items: flex-end;
+
+    z-index: 0; /* fica abaixo do menu/footer */
+}
+
+.home-imagem img {
+    height: 100%;
+    object-fit: contain;
 }

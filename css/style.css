@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* MENU */
+.menu {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.menu nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.menu .ativo {
+    color: #c0392b;
+}
+
+/* HERO */
+.hero {
+    background: url('../img/imagem1.jpg') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto {
+    max-width: 500px;
+}
+
+.texto h1 {
+    font-size: 48px;
+    color: #a93226;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.texto button {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.texto button:hover {
+    background: #a93226;
+    color: white;
+}
+
+/* IMAGEM */
+.imagem img {
+    width: 350px;
+}
+
+/* BOAS-VINDAS */
+.boas-vindas {
+    background: #eee;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.boas-vindas h2 {
+    color: #a93226;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}

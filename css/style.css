@@ -188,3 +188,56 @@ html, body {
     height: 100%;
     object-fit: contain;
 }
+
+.home-conteudo {
+    position: fixed;
+    left: 80px;
+    top: 45%;
+    transform: translateY(-50%);
+
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 2; /* acima do fundo */
+}
+
+/* TÍTULO */
+.home-conteudo h1 {
+    font-size: 48px;
+    color: #a93226;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* TEXTO */
+.home-conteudo p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* BOTÃO */
+.btn-home {
+    width: fit-content;
+    padding: 12px 28px;
+
+    border: 1px solid #333;
+    border-radius: 25px;
+
+    background: transparent;
+    cursor: pointer;
+
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* HOVER */
+.btn-home:hover {
+    background: #a93226;
+    color: white;
+    border-color: #a93226;
+}
